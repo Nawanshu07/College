@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JS Demo</h1>
+
+<p id="t">Hello</p>
+<button onclick="c()">Change Text</button>
+
+<br><br>
+
+<input id="n1" type="number" placeholder="A">
+<input id="n2" type="number" placeholder="B">
+<button onclick="add()">Add</button>
+<p id="s"></p>
+
+<ul id="l"></ul>
+
+<form id="f">
+    <button>Send</button>
+</form>
+
+<script>
+let x=5,y=3,z="Hi";
+document.body.style.color="black";
+
+function c(){
+    t.innerText="Changed";
+    document.body.style.color="blue";
+}
+
+function add(){
+    s.innerText=+n1.value + +n2.value;
+}
+
+for(let i=1;i<=3;i++){
+    let li=document.createElement("li");
+    li.innerText=i;
+    l.appendChild(li);
+}
+
+f.addEventListener("submit",e=>{
+    e.preventDefault();
+    let p=document.createElement("p");
+    p.innerText="Form Sent";
+    document.body.appendChild(p);
+});
+</script>
+
+</body>
+</html>
