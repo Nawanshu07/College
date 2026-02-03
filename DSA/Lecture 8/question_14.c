@@ -1,6 +1,5 @@
 //create a link list , display , insert a new node , delete a node , exit , these are choices 
 #include <stdio.h>
-
 int main() {
     int choice;
     do {
@@ -21,6 +20,7 @@ else if (choice == 2) {
 }
 else if (choice == 3) {
     printf("Inserting a New Node...\n");
+    
 }
 else if (choice == 4) {
     printf("Deleting a Node...\n");
