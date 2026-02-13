@@ -1,0 +1,49 @@
+########################
+# Compiled binaries
+########################
+*.exe
+*.out
+*.o
+*.obj
+*.class
+*.jar
+
+########################
+# Build / dist folders
+########################
+build/
+bin/
+dist/
+out/
+target/
+
+########################
+# Python
+########################
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+########################
+# JavaScript / Node.js
+########################
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+########################
+# Logs / temp
+########################
+*.log
+*.tmp
+
+########################
+# IDE / OS junk
+########################
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
