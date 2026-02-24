@@ -1,0 +1,15 @@
+body{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin: 0;
+}
+
+
+h1{
+    color:green;
+    font-size: 40px;
+    font-weight: bolder;
+}
