@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dashboard{
+            display: grid;
+            grid-template-columns: repeat(12,1fr);
+            grid-template-rows: 80px 500px 400px;
+            gap: 10px;
+            padding: 18px;
+            background-color: white;
+        }
+
+        .card{
+            background-color: blueviolet;
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+        .header{
+            grid-column: 1 / 13;}
+
+        .sidebar{
+            grid-column: 1/4;
+        }
+
+        .main{
+            grid-column: 4/13;
+        }
+
+        .footer{
+            grid-column: 1/13;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="card header"></div>
+        <div class="card sidebar"></div>
+        <div class="card main"></div>
+        <div class="card footer"></div>
+    </div>
+</body>
+</html>
