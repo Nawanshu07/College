@@ -1,49 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .dashboard{
+        .dashboard {
             display: grid;
-            grid-template-columns: repeat(12,1fr);
-            grid-template-rows: 80px 500px 400px;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 80px 800px 300px;
             gap: 10px;
             padding: 18px;
             background-color: white;
         }
 
-        .card{
+        .card {
             background-color: blueviolet;
             padding: 20px;
             text-align: center;
             font-size: 20px;
             border-radius: 10px;
         }
-        .header{
-            grid-column: 1 / 13;}
 
-        .sidebar{
-            grid-column: 1/4;
+        .header {
+            grid-column: 1 / 13;
         }
 
-        .main{
+        .sidebar {
+            grid-column: 1/4;
+            background-color: rgb(198, 137, 255);
+        }
+
+        .main {
             grid-column: 4/13;
         }
 
-        .footer{
+        .footer {
             grid-column: 1/13;
+            background-color: black;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            font-size: larger;
+            margin: 10px;
+            font-weight: bolder;
 
         }
+
+        nav {
+            background-color: yellow;
+            padding: 10px;
+            border-radius: 100px;
+        }
+        aside{
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            font-family: oswald;
+        }
+       
+        
     </style>
 </head>
+
 <body>
     <div class="dashboard">
-        <div class="card header"></div>
-        <div class="card sidebar"></div>
-        <div class="card main"></div>
-        <div class="card footer"></div>
+        <div class="card header">
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+        <div class="card sidebar">
+            <aside></aside>
+            <aside>CSS Introduction </aside><br>
+            <aside>CSS Properties </aside><br>
+            <aside>CSS Syntex</aside><br>
+            <aside>CSS Icons</aside><br>
+            <aside>CSS Fonts</aside><br>
+            <aside>CSS Box Model</aside><br>
+        </div>
+        <div class="card main" style="color: white;">The Grid Layout Module offers a grid-based layout system, with rows and columns. The Grid Layout Module allows developers to easily create complex web layouts.kThe Grid Layout Module makes it easy to design a responsive layout structure, without using float or
+            positioning.
+        <br>
+        <h1>CSS Saves a Lot of Work!</h1>
+        <br>
+     <video src="CSS - Introduction - W3Schools.com.mp4" controls width="400px" height="200"></video>
+    </div>
+        <div class="card footer" style="color: white;">
+            Learn programming the smart way. Structured tutorials, real examples, and hands-on practice.
+            <br>
+        
+
+HTML Tutorial 
+
+CSS Tutorial 
+
+PHP Tutorial <br>
+
+Java Tutorial <br>
+
+C# Tutorial <br>
+
+JavaScript Tutorial <br>
+
+SQL Tutorial <br>
+
+Python Tutorial <br>
+=
+            
+            </div>
     </div>
 </body>
+
 </html>
