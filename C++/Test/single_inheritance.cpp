@@ -3,27 +3,18 @@ using namespace std;
 class A
 {
 private:
-    void display2()
-    {
-        cout << "I am private class";
-    }
-
+    int a = 2;
+protected:
+    int b = 3;
 public:
     int x = 2;
-
-protected:
-    void display()
-    {
-        cout << "I am in class A";
-        cout << "x = " << x;
-    }
 };
+
 class B:public A{
     public:
-    int a = 4;
-    void display3(){
-        cout<<"a = "<<a;
-        cout<<"I am in class B";
+    void display(){
+        cout<<"b = "<<b;
+        cout<<"x = "<<x;
     }
 };
 
@@ -31,9 +22,7 @@ int main()
 {
 A o2;
 B o1;
-o1.display3();
-
-
+o1.display();
 
     return 0;
 }
