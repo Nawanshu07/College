@@ -1,32 +1,38 @@
-//WAP 
-
 #include <iostream>
 using namespace std;
 
-class Teacher{
+class Parent{
     private:
-        int id;
-        string name;
-        string sub;
+        int a;
+    protected:
+        int b;
     public:
-        void input(){
-            cout<<"Enter id , name and sub:";
-            cin >> id >> name >> sub;
+        int c;
+    
+        Parent(int x, int y, int z){
+            a = x;
+            b = y;
+            c = z;
         }
 
+};
+
+class child:public Parent{
+    public:
+    child(): Parent(20,30,40){}
         void display(){
-            cout<<"id :"<<id;
-            cout<<"\nName :"<<name;
-            cout<<"\nsubject :"<<sub;
-            
+            cout<<"b :"<<b;
+            cout<<"c :"<<c;
         }
 };
 
 int main() {
 
-    Teacher t1;
-    t1.input();
-    t1.display();
+    Parent p(20,30,40);
+    child c;
+
+    c.display();
 
     return 0;
+    
 }
