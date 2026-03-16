@@ -1,45 +1,87 @@
-// create node for left and rifgt child of a binary tree
 #include <stdio.h>
 #include <stdlib.h>
-struct node {
-    int rdata;
-    int ldata;
-    struct node *left;
-    struct node *right;
-    
+
+struct node
+{
+    int info;
+    struct node *link;
 };
 
-int main() {
-    int ch;
-    
-    printf("Enter the root of the tree:");
-    scanf("%c",&ch);
-    
-    struct node *root = malloc(sizeof(struct node));
-    
-    printf("Enter left data:");
-    scanf("%d",&root->ldata);
+int main()
+{
+    int ldata;
+    struct node *ptr = NULL, *newnode, *lstart = NULL;
 
-    printf("Enter right data:");
-    scanf("%d",&root->rdata);
-          
+    printf("Enter left data (-999 to end): ");
+    scanf("%d", &ldata);
 
-    struct node *ptr = root;
-
-      for (int i = 0; i < 1; i++)
+    while(ldata != -999)
     {
-         printf("left data: %d", ptr->ldata);
+        newnode = malloc(sizeof(struct node));
+        newnode->info = ldata;
+        newnode->link = NULL;
+
+        if(ptr == NULL)
+        {
+            lstart = ptr = newnode;
+        }
+        else
+        {
+            ptr->link = newnode;
+            ptr = newnode;
+        }
+
+        printf("Enter left data (-999 to end): ");
+        scanf("%d", &ldata);
     }
 
-    ptr = root;
+// right 
+
+    int rdata;
+    struct node *ptr2 = NULL, *newnodee, *rstart = NULL;
+
+    printf("Enter right data (-999 to end): ");
+    scanf("%d", &rdata);
+
+    while(rdata != -999)
+    {
+        newnodee = malloc(sizeof(struct node));
+        newnodee->info = rdata;
+        newnodee->link = NULL;
+
+        if(ptr2 == NULL)
+        {
+            rstart = ptr2 = newnodee;
+        }
+        else
+        {
+            ptr2->link = newnodee;
+            ptr2 = newnodee;
+        }
+
+        printf("Enter right data (-999 to end): ");
+        scanf("%d", &rdata);
+    }
+
+    ptr = lstart;
+    printf("Left data:");
+    while(ptr != NULL)
+    {
+        printf("%d  ", ptr->info);
+        ptr = ptr->link;
+    }
+
+
+
     printf("\n");
 
-    for (int i = 0; i < 1; i++)
+        printf("Right data:");
+    ptr = rstart;
+    while(ptr != NULL)
     {
-         printf("right data: %d", ptr->rdata);
+        printf("%d  ", ptr->info);
+        ptr = ptr->link;
     }
-    
-   
 
     return 0;
 }
