@@ -37,6 +37,8 @@ int main()
     }
 
     ptr = start;
+
+    
     while(ptr != NULL)
     {
         printf("%d -> ", ptr->info);

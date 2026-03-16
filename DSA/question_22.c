@@ -1,50 +1,45 @@
+// create node for left and rifgt child of a binary tree
 #include <stdio.h>
-
-void enqueue(int *r, int queue[], int item)
-
-    if (*r == 9) {
-        printf("Overflow\n");
-    } else {
-        (*r)++;
-        queue[*r] = item;
-}
-
-
-void display(int queue[] , int f , int r){
-    for (int i = f; i <= r; i++)
-    {
-        printf("%d ",queue[i]);
-    }
-}
+#include <stdlib.h>
+struct node {
+    int rdata;
+    int ldata;
+    struct node *left;
+    struct node *right;
+    
+};
 
 int main() {
     int ch;
-    int queue[10];
-    int r = -1;
-    int f = 0;
-
-    printf("enter the choice:");
-    scanf("%d",&ch);
-
-    switch (ch)
-    {
-    case 1:
-        
-        break;
-    case 2:
-        
-        break;
-
-    case 3:
-        display();
-        break;
     
-    case 4:
-        return 0;
+    printf("Enter the root of the tree:");
+    scanf("%c",&ch);
+    
+    struct node *root = malloc(sizeof(struct node));
+    
+    printf("Enter left data:");
+    scanf("%d",&root->ldata);
 
-    default:
-        printf("Enter a valid choice!");
-        break;
+    printf("Enter right data:");
+    scanf("%d",&root->rdata);
+          
+
+    struct node *ptr = root;
+
+      for (int i = 0; i < 1; i++)
+    {
+         printf("left data: %d", ptr->ldata);
     }
+
+    ptr = root;
+    printf("\n");
+
+    for (int i = 0; i < 1; i++)
+    {
+         printf("right data: %d", ptr->rdata);
+    }
+    
+   
+
     return 0;
 }
