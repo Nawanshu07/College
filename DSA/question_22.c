@@ -5,7 +5,8 @@ struct node
 {
     int info;
     struct node *link;
-};
+}; 
+
 
 int main()
 {
