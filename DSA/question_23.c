@@ -62,31 +62,6 @@ int main()
         printf("Enter right data (-999 to end): ");
         scanf("%d", &rdata);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     
     ptr = lstart;
     printf("Left data:");
