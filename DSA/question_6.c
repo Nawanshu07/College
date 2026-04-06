@@ -1,4 +1,4 @@
-#include <stdio.h>
+    #include <stdio.h>
 
 int main() {
     int arr[20] = {1,2,3,4,5,6,7,8,9,10,11,22,33,44,55,65,76,87,675} , element = 11 , found_on ;
