@@ -8,7 +8,7 @@ int main() {
     string line;
     int n,i;
 
-    fout.open("font.txt");
+    fout.open("text.txt");
 
     cout<<"Enter number of lines:";
     cin>>n;
@@ -21,9 +21,9 @@ int main() {
         fout<<line<<endl;
     }
 
-    fout.close();
+    fout.close(); 
 
-    fin.open("font.txt");
+    fin.open("text.txt");
 
     cout<<"content of file:\n";
     while (getline(fin,line))
