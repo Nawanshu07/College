@@ -22,10 +22,10 @@ int main() {
 
     cout<<"\nFile Random Access\n";
     
-    file.open("data.txt" );
+    file.open("data.txt" , ios::in | ios::binary );
 
     cout<<"\n";
-    file.seekg(2,ios::beg);
+    file.seekg(2,ios::beg );
     file.get(ch);
     cout<<"character at position " << file.tellg()  << ":"<< ch;
 
